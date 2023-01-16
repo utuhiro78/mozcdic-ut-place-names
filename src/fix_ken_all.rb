@@ -2,7 +2,7 @@
 # coding: utf-8
 
 # Author: UTUMI Hirosi (utuhiro78 at yahoo dot co dot jp)
-# License: APACHE LICENSE, VERSION 2.0
+# License: Apache License, Version 2.0
 
 `rm -f KEN_ALL.CSV`
 `wget -N https://www.post.japanpost.jp/zipcode/dl/kogaki/zip/ken_all.zip`
