@@ -13,6 +13,8 @@ Thanks to the Japan Post's ZIP code data team.
 
 mozcdic-ut-place-names.txt: [Public Domain](https://www.post.japanpost.jp/zipcode/dl/readme.html)
 
+> 郵便番号データに限っては日本郵便株式会社は著作権を主張しません。
+
 Source code: Apache License, Version 2.0
 
 ## Usage
