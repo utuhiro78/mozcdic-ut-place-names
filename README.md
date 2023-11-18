@@ -1,8 +1,3 @@
----
-title: Mozc UT Place Name Dictionary
-date: 2023-01-15
----
-
 ## Overview
 
 Mozc UT Place Name Dictionary is a dictionary converted from the [Japan Post's ZIP code data](https://www.post.japanpost.jp/zipcode/download.html) for Mozc.
