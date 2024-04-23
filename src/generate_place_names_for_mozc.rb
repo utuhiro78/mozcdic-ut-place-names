@@ -8,7 +8,7 @@ require 'nkf'
 
 filename = "KEN_ALL.CSV.fixed"
 dicname = "mozcdic-ut-place-names.txt"
-id_mozc = "1847"
+id_mozc = "1843"
 
 dicfile = File.new(filename, "r")
 	lines = dicfile.read.split("\n")
