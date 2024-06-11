@@ -4,11 +4,15 @@
 # Author: UTUMI Hirosi (utuhiro78 at yahoo dot co dot jp)
 # License: Apache License, Version 2.0
 
+require 'open-uri'
 require 'nkf'
 
 filename = "KEN_ALL.CSV.fixed"
 dicname = "mozcdic-ut-place-names.txt"
-id_mozc = "1843"
+
+url = "https://raw.githubusercontent.com/google/mozc/master/src/data/dictionary_oss/id.def"
+id_mozc = URI.open(url).read.split(" 名詞,一般,")[0]
+id_mozc = id_mozc.split("\n")[-1]
 
 dicfile = File.new(filename, "r")
 	lines = dicfile.read.split("\n")
