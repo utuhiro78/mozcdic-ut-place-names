@@ -27,7 +27,7 @@ To modify the costs for words or merge multiple UT dictionaries into one, use th
 
 ## Update this dictionary with the latest stuff
 
-Requirement(s): python
+Requirement(s): python-jaconv
 
 ```
 cd src/
