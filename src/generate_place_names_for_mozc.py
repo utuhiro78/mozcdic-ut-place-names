@@ -29,6 +29,7 @@ d1 = ["", "いち", "に", "さん", "よん", "ご", "ろく", "なな", "は�
 d2 = ["じゅう", "にじゅう", "さんじゅう", "よんじゅう", "ごじゅう"]
 
 for p in range(5):
+	# append していくので range(len(d1)) にはしない
 	for q in range(10):
 		d1.append(d2[p] + d1[q])
 
@@ -79,5 +80,5 @@ l2 = []
 
 with open(dicname, "w", encoding="utf-8") as dicfile:
 	dicfile.write("\n".join(lines))
-	# cat で結合するときのために最後は改行する
+	# cat 用に最後は改行
 	dicfile.write("\n")
