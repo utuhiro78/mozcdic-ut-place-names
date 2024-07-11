@@ -15,7 +15,8 @@ dicname = "mozcdic-ut-place-names.txt"
 url = "https://raw.githubusercontent.com/google/mozc/master/src/data/dictionary_oss/id.def"
 with urllib.request.urlopen(url) as response:
 	id_mozc = response.read().decode()
-	id_mozc = id_mozc.split(" 名詞,一般,")[0].split("\n")[-1]
+
+id_mozc = id_mozc.split(" 名詞,一般,")[0].split("\n")[-1]
 
 with open(filename, "r") as dicfile:
 	lines = dicfile.read()
