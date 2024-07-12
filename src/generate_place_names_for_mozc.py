@@ -51,7 +51,7 @@ for i in range(len(lines)):
 
 	# 市を出力
 	mozc_ent = [entry[4], id_mozc, id_mozc, "9000", entry[7]]
-	l2.append("\t".join(mozc_ent))
+	l2.append("\t".join(mozc_ent) + "\n")
 
 	# 町の読みが半角数字を含むか確認
 	c = "".join(filter(str.isdigit, entry[5]))
@@ -70,16 +70,14 @@ for i in range(len(lines)):
 
 	# 町を出力
 	mozc_ent = [entry[5], id_mozc, id_mozc, "9000", entry[8]]
-	l2.append("\t".join(mozc_ent))
+	l2.append("\t".join(mozc_ent) + "\n")
 
 	# 市+町を出力
 	mozc_ent = [entry[4] + entry[5], id_mozc, id_mozc, "9000", entry[7] + entry[8]]
-	l2.append("\t".join(mozc_ent))
+	l2.append("\t".join(mozc_ent) + "\n")
 
 lines = sorted(set(l2))
 l2 = []
 
 with open(dicname, "w", encoding="utf-8") as dicfile:
-	dicfile.write("\n".join(lines))
-	# cat 用に最後は改行
-	dicfile.write("\n")
+	dicfile.writelines(lines)
