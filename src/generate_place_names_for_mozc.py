@@ -8,8 +8,8 @@ import jaconv
 import re
 import urllib.request
 
-filename = "KEN_ALL.CSV.fixed"
-dicname = "mozcdic-ut-place-names.txt"
+file_name = "KEN_ALL.CSV.fixed"
+dict_name = "mozcdic-ut-place-names.txt"
 
 # Mozc の一般名詞のID
 url = "https://raw.githubusercontent.com/google/mozc/master/src/data/dictionary_oss/id.def"
@@ -18,8 +18,8 @@ with urllib.request.urlopen(url) as response:
 
 id_mozc = id_mozc.split(" 名詞,一般,")[0].split("\n")[-1]
 
-with open(filename, "r") as dicfile:
-    lines = dicfile.read()
+with open(file_name, "r") as dict_file:
+    lines = dict_file.read()
 
 lines = lines.splitlines()
 
@@ -79,5 +79,5 @@ for i in range(len(lines)):
 lines = sorted(set(l2))
 l2 = []
 
-with open(dicname, "w", encoding="utf-8") as dicfile:
-    dicfile.writelines(lines)
+with open(dict_name, "w", encoding="utf-8") as dict_file:
+    dict_file.writelines(lines)

@@ -17,10 +17,10 @@ with ZipFile("ken_all.zip") as zip_ref:
 lines = normalize("NFKC", lines)
 lines = lines.splitlines()
 
-dicname = "KEN_ALL.CSV.fixed"
+dict_name = "KEN_ALL.CSV.fixed"
 
-with open(dicname, "w", encoding="utf-8") as dicfile:
-    dicfile.write("")
+with open(dict_name, "w", encoding="utf-8") as dict_file:
+    dict_file.write("")
 
 for i in range(len(lines)):
     # 01101,"064  ","0640820","ホッカイドウ","サッポロシチュウオウク","オオドオリニシ(20-28チョウメ)","北海道","札幌市中央区","大通西(20〜28丁目)",1,0,1,0,0,0
@@ -54,5 +54,5 @@ for i in range(len(lines)):
     # 表記の () は取らない。「原極楽坂」だと読みにくいので。
     entry[5] = entry[5].replace("(", "").replace(")", "")
 
-    with open(dicname, "a", encoding="utf-8") as dicfile:
-        dicfile.write(",".join(entry) + "\n")
+    with open(dict_name, "a", encoding="utf-8") as dict_file:
+        dict_file.write(",".join(entry) + "\n")
