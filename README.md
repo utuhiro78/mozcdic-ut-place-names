@@ -1,6 +1,6 @@
 ## Overview
 
-Mozc UT Place Name Dictionary is a dictionary converted from the [Japan Post's ZIP code data](https://www.post.japanpost.jp/zipcode/download.html) for Mozc.
+A dictionary converted from the [Japan Post's ZIP code data](https://www.post.japanpost.jp/zipcode/download.html) for Mozc.
 
 Thanks to the Japan Post's ZIP code data team.
 
@@ -14,7 +14,7 @@ Source code: Apache License, Version 2.0
 
 ## Usage
 
-Add mozcdic-ut-*.txt to dictionary00.txt and build Mozc as usual.
+Add the dictionary to dictionary00.txt and build Mozc as usual.
 
 ```
 tar xf mozcdic-ut-*.txt.tar.bz2
